@@ -1,0 +1,18 @@
+apiVersion: kpt.dev/v1
+kind: Kptfile
+metadata:
+  name: onos
+upstream:
+  type: git
+  git:
+    repo: https://github.com/lbors/nephio-test-catalog-01
+    directory: /onos-classic
+    ref: v0.1
+  updateStrategy: resource-merge
+upstreamLock:
+  type: git
+  git:
+    repo: https://github.com/lbors/nephio-test-catalog-01
+    directory: /onos-classic
+    ref: onos-classic/v0.1
+    commit: cf87b66f45d99260866730c15f4e44d33f792eb5
